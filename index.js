@@ -30,3 +30,4 @@ app.post("/", upload.single("picture"), async (req, res) => {
 });
 
 app.listen(3000);
+console.log('start on http://localhost:3000/')
