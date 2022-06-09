@@ -23,7 +23,7 @@ app.post("/", upload.single("picture"), async (req, res) => {
   const timestamp = new Date().toISOString();
   const ref = `${timestamp}-${originalname}.png`;
   await sharp(buffer)
-    .webp({ quality: 20 })
+    .png({ quality: 20 })
     .toFile("./uploads/" + ref);
   const link = `http://localhost:3000/${ref}`;
   return res.json({ link });
